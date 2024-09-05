@@ -1,0 +1,101 @@
+@startuml diagrama_parqueadero
+
+class Usuario{
+    String nombre
+    String apellido
+    String tipo
+    String email
+    int telefono
+    String rol 
+    String foto
+}
+class GestionU{
+    Cubiculo cubiculo
+    Vehiculo vehiculo
+}
+class Vehiculo{
+    String marca
+    String placa
+    String color
+    String tipo
+    String descripcion
+}
+class Cubilculo{
+    String id 
+    String estado
+    String zona
+    String tipo
+    int numero
+    double ancho 
+    double largo 
+}
+class Parqueadero{
+    String ncubiculos
+    String area
+    String direccion
+    int horario
+    String estado
+
+}
+class Turno{
+    String id
+    Horario Horario
+    Guardia guardia
+    String observacion
+    Parqueadero parqueadero
+    String cargo
+}
+class Funcionario{
+    String nombre
+    String apellido
+    String tipo
+    String email
+    int telefono
+    String rol 
+    String foto
+    reservar()
+}
+class GestionP{
+    String empleados
+    String cargo
+    int horario
+}
+class Servicio{
+    String id
+    String fecha_e
+    String fecha_s
+    Usuario conductor
+    Vehiculo vehiculo
+    Guardia guardia_e
+    Guardia guardia_s
+    Cubilculo cubiculo
+    Parqueadero parqueadero
+    Tarifa tarifa
+    String descripcion
+}
+class Tarifa{
+    String id
+    double valor
+    String tipo
+    String unidad
+}
+class Guardia{
+    String id
+    String nombre
+    String apellido
+    String email
+    String foto
+    int telefono
+    Turno turno
+}
+class Horario{
+    String id
+    String dia 
+    String hora_i
+    String hora_f
+}
+class Excepciones{
+    String beneficios
+    asignar()
+}
+@enduml

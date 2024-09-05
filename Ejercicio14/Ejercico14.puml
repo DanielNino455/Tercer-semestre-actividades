@@ -1,0 +1,50 @@
+@startuml Clases 
+class Especie{
+ + String nombreEnEspañol
+ + String nombreCientifico
+ + String descripcion
+ + String clima
+}
+class Empleado{
+    # String nombre
+    # String apellido
+    # String cargo
+    # int id
+    # String correo
+    # int telefono
+}
+class Cuidador {                    
+ + String genero
+ + int edad
+ + String area
+}
+class Guia{
+ - String direccion
+ - String fechaIngreso
+
+}
+class Itinerario{
+ - String codigoItinerario
+ + Strig duracionRecorrido
+ + int longitud
+ + int maximoVisitantes
+
+}
+class Habitad{
++ strig nombre  
++ int clima
++ String vegetacionPredominante
++ String continente
+
+}
+class Zona{
++ String nombre
++ int extension
+}
+Empleado <|-- Cuidador : hereda
+Empleado <|-- Guia : herenda
+Habitad o-- "0..*" Especie : agregación
+Zona o-- "0..*" Habitad : agregar
+Itinerario "1" -- "0..*" Guia : asignar
+@enduml
+

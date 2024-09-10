@@ -1,0 +1,18 @@
+@startuml clases 
+class Usuario {
+- String nombre;
+- String apellido;
+- String cedula;
+- String email;
+- String genero;
+- listaImc LIst<imc>;
+}
+class Imc{
+- double pesoDeLaPersona;
+- double alturaPersona;
+- Usuario usuario;
++ double calularImc();
+}
+
+usuario "1" -- "0..*" Imc: tiene
+@enduml
